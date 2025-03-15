@@ -22,7 +22,7 @@ jobs:
     - name: Copy files to public folder
       run: |
         mkdir -p public
-        rsync -av --exclude='.github' . public/
+        rsync -av --exclude={'.github','.git'} . public/
     # When the dist_dir is ready, deploy it to neocities
     # Here we deploy the folder named `public`
     - name: Deploy to neocities
