@@ -18,7 +18,7 @@ jobs:
     # The checkout step copies your repo into the action runner. Important!
     - uses: actions/checkout@v4
     # Set up any tools and build steps here
-    # Copy working files to the public folder, excluding the .github folder
+    # Copy working files to the public folder, excluding the .github and .git folders
     - name: Copy files to public folder
       run: |
         mkdir -p public
